@@ -41,7 +41,7 @@ The figure below is taken from the paper linked above and represents the archite
 ## Installation
 
 Create a python virtual environment / conda environment and install:
-```
+```sh
 # first install CUDA 11.8 (only if you have NVIDIA GPU in your machine and compatible NVIDIA driver) 
 # install pytorch with CUDA support (refer official docs)
 
@@ -89,24 +89,60 @@ python test.py --gen_name [ replace_your_gen_name_in_str ] --test_set 'Set14'
 ```
 
 ## Results
+Following are the images which I obtained after running ```test.py``` file. ```Original Image``` is taken from Set14 dataset. 
 <div align="center">
   <table>
     <tr>
       <td align="center">
-        <img src="images/original_HR_image.png" alt="Image 1" width="200"/>
+        <img src="images/1_original_HR_image.png" alt="Image 1" width="200"/>
         <br>
         <em>Original Image</em>
       </td>
       <td align="center">
-        <img src="images/result_SRGAN_MSE.png" alt="Image 2" width="200"/>
+        <img src="images/1_result_SRGAN_MSE.png" alt="Image 2" width="200"/>
         <br>
         <em>SRGAN output</em>
       </td>
       <td align="center">
-        <img src="images/result_SRResNet_MSE.png" alt="Image 3" width="200"/>
+        <img src="images/1_result_SRResNet_MSE.png" alt="Image 3" width="200"/>
         <br>
         <em>SRResNet output</em>
       </td>
     </tr>
   </table>
 </div>
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="images/2_original_HR_image.png" alt="Image 1" width="200"/>
+        <br>
+        <em>Original Image</em>
+      </td>
+      <td align="center">
+        <img src="images/2_result_SRGAN_MSE.png" alt="Image 2" width="200"/>
+        <br>
+        <em>SRGAN output</em>
+      </td>
+      <td align="center">
+        <img src="images/2_result_SRResNet_MSE.png" alt="Image 3" width="200"/>
+        <br>
+        <em>SRResNet output</em>
+      </td>
+    </tr>
+  </table>
+</div>
+
+Each model is trained for **100** epochs and took me **~500** minutes to run each experiment on 1 NVIDIA GeForce GTX 1650 GPU. 
+> NOTE : Original authors of this paper trained the SRResNet model for 1000000 (1e6) iterations, and SRGAN for 100000 (1e5) iterations with lr=0.0001 and another 100000 (1e5) iterations with lr=0.00001. Compared to this the training done by me is much less and accordingly the results (PSNR values; in dB) are obtained which are shown below:
+
+<div style="width: 100%; display: flex; justify-content: center;">
+  
+| test_set      | SRResNet (MSE) | SRGAN (MSE)  | SRGAN (VGG22) |
+|     :---:      |     :---:      |     :---:      |     :---:      |
+| ```Set5```     | 28.33781 | 25.73578 | 22.64799 |
+| ```Set14```      | 25.53835 | 23.81825 | 21.16478 |
+
+</div>
+
+
