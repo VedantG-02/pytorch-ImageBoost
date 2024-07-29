@@ -9,3 +9,31 @@ The figure below is taken from the paper linked above and represents the archite
 </p>
 
 ## Directory Structure and Usage
+```
+.
+├── README.md
+│
+├── data/                            # dataset directory 
+│   ├── train/                       # training datasets; separate dir for each (preferred, but not necessary)
+│   │   ├── dataset_1
+│   │   ├── dataset_2
+│   │   └── ...
+│   │
+│   └── test/                        # testing datasets; separate dir for each
+│
+├── images/                          # directory containing images used in this repo
+│
+├── loss/                            
+│   └── loss.py                      # includes loss functions 
+│
+├── utils/                           
+│   ├── dataloader.py                # dataset and batch sampler class
+│   ├── model.py                     # includes layers and and model arch code
+│   └── utils.py                     # helper functions
+│
+├── SRGAN_train.py                   # training loop to train SRGAN model
+├── SRResNet_train.py                # training loop to train SRResNet model
+├── check_image_mode.py              # to check if all images are in RGB mode
+├── test.py                          # code to evaluate and get results
+└── vgg19_save.py                    # to save pretrained vgg19 model
+```
