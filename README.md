@@ -37,3 +37,22 @@ The figure below is taken from the paper linked above and represents the archite
 ├── test.py                          # code to evaluate and get results
 └── vgg19_save.py                    # to save pretrained vgg19 model
 ```
+
+## Installation
+
+Create a python virtual environment / conda environment and install:
+```
+# first install CUDA 11.8 (only if you have NVIDIA GPU in your machine and compatible NVIDIA driver) 
+# install pytorch with CUDA support (refer official docs)
+
+python == 3.10.11
+torch == 2.3.1+cu118 
+torchvision == 0.18.1+cu118
+```
+
+## Steps To Run
+
+1. Clone the project into your machine
+```
+
+```
