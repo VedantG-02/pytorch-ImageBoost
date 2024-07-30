@@ -58,7 +58,7 @@ torchvision == 0.18.1+cu118
 ```
 git clone https://github.com/VedantG-02/pytorch-ImageBoost
 ```
-2. Download the dataset from the links provided above and place them in the ```data/train/``` or ```data/test/``` as shown in the above directory structure. Only use the scale factor 4 images in the ```test/``` sets, as the model here upscales 4x the low-res (LR) images.
+2. Download the dataset from the links provided above and place them in the ```data/train/``` and ```data/test/``` as shown in the above directory structure. Only use the scale factor 4 images in the ```test/``` sets, as the model here upscales 4x the low-res (LR) images.
 3. (Optional) To check the count of images in the testing dataset(s) whose mode isn't RGB, run the following command:
 ```
 python check_image_mode.py
