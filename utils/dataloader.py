@@ -90,7 +90,7 @@ def test():
 
     testdata14 = MySuperResolutionDataset('data', set='test', test_set='Set14')
     print(f"\nTesting Data (Set14):\nlen(testdata): {len(testdata14)}")
-    print(testdata5[0])# gives None; as transform=None
+    print(testdata14[0])# gives None; as transform=None
 
     print("\n# ---Testing Done--- #\n")
     
