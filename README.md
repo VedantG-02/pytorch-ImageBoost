@@ -2,6 +2,8 @@
 
 This repo contains the implementation of image super resolution models **SRResNet** (**S**uper **R**esolution **ResNet**) and SRGAN (**S**uper **R**esolution **GAN**) from scratch using DIV2K, Flickr2K datasets for training and Set5, Set14 datasets for testing. Click [here](https://arxiv.org/abs/1609.04802) to find the paper. Click [here](https://www.kaggle.com/datasets/sharansmenon/div2k) to get DIV2K dataset on kaggle and download it. Click [here](https://www.kaggle.com/datasets/daehoyang/flickr2k) to get Flickr2K dataset on kaggle and download it. Testing datasets can both be downloaded from [here](https://github.com/jbhuang0604/SelfExSR).
 
+> NOTE : Original work used a subset of ImageNet dataset for training purposes (more details in the paper). I used freely available datasets on kaggle.
+
 The figure below is taken from the paper linked above and represents the architecture of SRGAN.
 
 <p align="center">
@@ -81,10 +83,10 @@ python SRGAN_train.py --from_scratch 'n' --epochs 100 --lr 0.0001 --batch_size 1
 ```
 7. To evaluate the model on the test datasets and obtain PSNR values as well as generated images, run the following command:
 ```sh
-# testing on Set14 dataset
+# testing on Set5 dataset
 python test.py --gen_name [ replace_your_gen_name_in_str ] --test_set 'Set5'
 
-# testing on Set5 dataset
+# testing on Set14 dataset
 python test.py --gen_name [ replace_your_gen_name_in_str ] --test_set 'Set14'
 ```
 
@@ -133,8 +135,8 @@ Following are the images which I obtained after running ```test.py``` file. ```O
   </table>
 </div>
 
-Each model is trained for **100** epochs and took me **~500** minutes to run each experiment on 1 NVIDIA GeForce GTX 1650 GPU. 
-> NOTE : Original authors of this paper trained the SRResNet model for 1000000 (1e6) iterations, and SRGAN for 100000 (1e5) iterations with lr=0.0001 and another 100000 (1e5) iterations with lr=0.00001. Compared to this the training done by me is much less and accordingly the results (PSNR values; in dB) are obtained which are shown below:
+Each model is trained for **100** epochs and took me **~500** mins (**~8.5** hrs) to run each experiment on 1 NVIDIA GeForce GTX 1650 GPU. 
+> NOTE : Authors of this paper trained the SRResNet model for 1000000 (1e6) iterations, and SRGAN for 100000 (1e5) iterations with lr=0.0001 and another 100000 (1e5) iterations with lr=0.00001. Compared to this the training done by me is much less and accordingly the results (PSNR values; in dB) are obtained which are shown below:
 
 <div style="width: 100%; display: flex; justify-content: center;">
   
