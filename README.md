@@ -96,17 +96,22 @@ Following are the images which I obtained after running ```test.py``` file. ```O
   <table>
     <tr>
       <td align="center">
-        <img src="images/1_original_HR_image.png" alt="Image 1" width="200"/>
+        <img src="images/1_original_HR_image.png" alt="Image 1" width="160"/>
         <br>
         <em>Original Image</em>
       </td>
       <td align="center">
-        <img src="images/1_result_SRGAN_MSE.png" alt="Image 2" width="200"/>
+        <img src="images/1_result_SRGAN_MSE.png" alt="Image 2" width="160"/>
         <br>
-        <em>SRGAN output</em>
+        <em>SRGAN MSE output</em>
       </td>
       <td align="center">
-        <img src="images/1_result_SRResNet_MSE.png" alt="Image 3" width="200"/>
+        <img src="images/1_result_SRGAN_VGG22.png" alt="Image 2" width="160"/>
+        <br>
+        <em>SRGAN VGG22 output</em>
+      </td>
+      <td align="center">
+        <img src="images/1_result_SRResNet_MSE.png" alt="Image 3" width="160"/>
         <br>
         <em>SRResNet output</em>
       </td>
@@ -117,17 +122,22 @@ Following are the images which I obtained after running ```test.py``` file. ```O
   <table>
     <tr>
       <td align="center">
-        <img src="images/2_original_HR_image.png" alt="Image 1" width="200"/>
+        <img src="images/2_original_HR_image.png" alt="Image 1" width="160"/>
         <br>
         <em>Original Image</em>
       </td>
       <td align="center">
-        <img src="images/2_result_SRGAN_MSE.png" alt="Image 2" width="200"/>
+        <img src="images/2_result_SRGAN_MSE.png" alt="Image 2" width="160"/>
         <br>
-        <em>SRGAN output</em>
+        <em>SRGAN MSE output</em>
       </td>
       <td align="center">
-        <img src="images/2_result_SRResNet_MSE.png" alt="Image 3" width="200"/>
+        <img src="images/2_result_SRGAN_VGG22.png" alt="Image 2" width="160"/>
+        <br>
+        <em>SRGAN VGG22 output</em>
+      </td>
+      <td align="center">
+        <img src="images/2_result_SRResNet_MSE.png" alt="Image 3" width="160"/>
         <br>
         <em>SRResNet output</em>
       </td>
